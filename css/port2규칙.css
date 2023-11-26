@@ -1,0 +1,725 @@
+@charset 'utf-8';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html { scroll-behavior: smooth; }
+a{
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+}
+
+nav {
+    position: relative;
+    
+    width:100%;
+    height:80px; 
+    background: rgb(255, 255, 255);
+   border-bottom: 1px solid gray;
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index: 10;
+}
+
+nav #navh2 a{
+    position: relative;
+    top: 24px;
+    left: 150px;
+    color: rgb(0, 0, 0);
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 26px;
+    
+
+}
+nav #navh2_1 a{
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    color: rgb(206, 0, 0);
+    font-style: italic;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-family: 'Anton', sans-serif;
+
+}
+nav #navh2_1 a #navspan{
+    color: rgb(0, 0, 0);
+}
+#solid1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    top: -35px;
+    left: 720px;
+    border-bottom: 2px solid rgb(206, 0, 0);
+}
+
+.nav {
+    position: absolute;
+    margin-top:50px;
+    width:100%;
+
+}
+
+.downdown {
+    position:fixed;
+    animation: down 0.3s ease;
+}
+@keyframes down {
+    0%{
+    transform: translateY(-50px)
+    }
+    100%{
+    transform: translateY(0px)
+    }  
+}
+
+
+/*메뉴부분*/
+
+.menu > li:hover {
+    transition-duration: 0.5s;
+}
+  
+  .menu > li:hover .submenu {
+    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+    transition-duration: 1s;
+}
+
+.menu {
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    top: 24px;
+    right: 100px;
+    width: 420px;
+    overflow: hidden;
+    
+  }
+  
+  .menu > li {
+    width: 20%; /*20*5=100%*/
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    
+  }
+
+  
+  .menu a {
+    position: relative;
+    color: #000000;
+    
+  }
+  
+  .submenu > li {
+    
+    line-height: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+  }
+
+    
+  .submenu > li:first-child {
+    margin-top: 16.2px;
+    line-height: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+  }
+  
+  .submenu {
+    height: 0px; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+header{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+
+}
+header .inner1{
+    width: 1180px;
+    margin: 0 auto;
+}
+header .inner1 #head_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+    z-index: 0;
+    
+    
+}
+
+header h1{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 200px;
+    
+}
+
+
+
+header #headp_2{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 220px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    
+}
+
+header #head_a{
+    position: relative;
+    color: white;
+    top: 280px;
+    left: 540px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    z-index: 2;
+    padding: 10px 30px;
+    background-color: #000000;
+}
+header #head_a:hover{
+    transition: all 0.3s;
+    background-color: white;
+    color: black;
+}
+
+header #headp_1{
+    position: relative;
+    opacity: 0.2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 400px;
+    left: -130px;
+    top: 0px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+}
+
+/* Arrow & Hover Animation */
+#more-arrows {
+    position: relative;
+    top: -300px;
+    left: 555px;
+    width: 75px;
+    height: 65px;
+   
+  }
+  #more-arrows:hover polygon {
+    fill: #FFF;
+    transition: all 0.2s ease-out;
+  }
+  #more-arrows:hover polygon.arrow-bottom {
+    transform: translateY(-18px);
+  }
+  #more-arrows:hover polygon.arrow-top {
+    transform: translateY(18px);
+  }
+  
+polygon {
+    fill: #FFF;
+    transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+    opacity: 0.75;
+}
+  polygon.arrow-top {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+#figure_1{
+    position: relative;
+    width: 100%;
+}
+
+#figure_1 .inner2{
+    position: relative;
+    width: 1280px;
+    height: 300px;
+    margin: 0 auto;
+   
+}
+#figure_1 .inner2 ul{
+    position: absolute;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    
+    
+}
+
+#figure_1 .inner2 #move1{
+    float: left;
+    padding: 15px 30px;
+    
+    background-color: rgb(255, 255, 255);
+    color: gray;
+}
+
+
+#figure_1 .inner2 #move1:hover{
+    transition: all 0.3s;
+    background-color: black;
+    color: white;
+
+}
+#figure_1 .inner2 #move2{
+    float: left;
+    padding: 15px 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid red;
+}
+#figure_1 .inner2 #move2:hover{
+    transition: all 0.3s;
+    background-color: black;
+    color: white;
+}
+
+
+#figure_1 .inner2 #figure_h1{
+    position: absolute;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    font-size: 50px;
+    top: 120px;
+    left: 200px;
+
+}
+
+#figure_1 .inner2 #figure_p_1{
+    position: absolute;
+    width: 500px;
+    top: 120px;
+    right: 200px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+}
+
+#figure_1 .inner2 #figure_p_2{
+    position: absolute;
+    width: 500px;
+    top: 260px;
+    right: 200px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    
+}
+
+#figure_1 .inner2 #figure_p_2 #figure_span_1{
+    position: relative;
+    font-weight: normal;
+ 
+}
+
+
+
+#figure_2{
+    position: relative;
+    width: 100%;
+    height: 73vh;
+    overflow: hidden;
+    background-color: #000000;
+    
+}
+
+#figure_2 #figure_img_1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+
+
+
+#section_1{
+    position: relative;
+    width: 100%;
+}
+
+#section_1 .inner3{
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    margin: 0 auto;
+}
+#section_1 .inner3 #gnb{
+    position: relative;
+    top: -106px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#section_1 .inner3 #gnb li{
+    padding: 35px 80px;
+    background-color: #FFF;
+    
+   
+}
+#section_1 .inner3 #gnb li:first-child{
+    border-radius: 50px 0px 0px 0px;
+}
+
+#section_1 .inner3 #gnb li a{
+    color: #9a9a9a;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    font-size: 25px;
+}
+#section_1 .inner3 #gnb li a:hover{
+    color: #000000;
+    transition: all 0.3s;
+}
+
+#sec_h1_1{
+    position: absolute;
+    top: -213px;
+    right: 120px;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    color: white;
+    font-size: 90px;
+    opacity: 0.7;
+}
+
+
+
+#section_1 .inner3 #sec_h1_2{
+    position: absolute;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    font-size: 50px;
+    top: 120px;
+    left: 200px;
+
+}
+#section_1 .inner3  #solid2{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 110px;
+    border-bottom: 2px solid red;
+}
+#section_1 .inner3 #sec_p_1{
+    position: absolute;
+    width: 500px;
+    top: 120px;
+    right: 200px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+}
+#sec_h2_1{
+    position: relative;
+    top: 260px;
+    display: flex;
+    justify-content: center;
+    border-collapse : collapse; 
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+}
+#sec_h2_1 span{
+    position: absolute;
+    top: 13px;
+    left: 700px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #b1b1b1;
+}
+table{
+    position: relative;
+    top: 270px;
+    display: flex;
+    justify-content: center;
+    border-collapse : collapse; 
+
+}  /*이중선 제거*/
+th,td{
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #b6b6b6;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    vertical-align: top;	/* 위 */
+    vertical-align: bottom;   /* 아래 */
+    vertical-align: middle;   /* 가운데 */
+}
+
+
+
+
+#section_2{
+    width: 100%;
+    background-color: #ededed;
+}
+
+#section_2 .inner4{
+    position: relative;
+    width: 1280px;
+    height: 300px;
+    margin: 0 auto;
+
+}
+
+#section_2 .inner4 #sec_h1_3{
+    position: absolute;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    font-size: 50px;
+    top: 100px;
+    left: 200px;
+
+}
+#section_2 .inner4  #solid3{
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    width: 110px;
+    border-bottom: 2px solid red;
+}
+#section_2 .inner4 #sec_p_2{
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    right: 130px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+}
+
+
+
+#section_3{
+    width: 100%;
+    
+}
+
+#section_3 .inner4{
+    position: relative;
+    width: 1280px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+#section_3 .inner4 #sec_h1_3{
+    position: absolute;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    font-size: 50px;
+    top: 100px;
+    left: 200px;
+
+}
+#section_3 .inner4  #solid3{
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    width: 110px;
+    border-bottom: 2px solid red;
+}
+#section_3 .inner4 #sec_p_2{
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    right: 370px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-size: 13px;
+}
+#section_3 .inner4 #sec_p_3{
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    right: 0px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-size: 13px;
+}
+
+
+
+#section_4{
+    width: 100%;
+    background-color: #ededed;
+}
+
+
+#section_4 .inner4{
+    position: relative;
+    width: 1280px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+#section_4 .inner4 #sec_h1_3{
+    position: absolute;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+    font-size: 50px;
+    top: 100px;
+    left: 200px;
+
+}
+#section_4 .inner4  #solid3{
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    width: 110px;
+    border-bottom: 2px solid red;
+}
+#section_4 .inner4 #sec_p_2{
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    right: 130px;
+    line-height: 27px;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+}
+
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+}
+
+footer .inner6{
+    position: relative;
+    width: 1280px;
+    height: 250px;
+    margin: 0 auto;
+}
+footer .inner6 h1{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    color: white;
+    font-size: 70px;
+}
+footer .inner6 #footer_p1{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 50px;
+    left: 280px;
+    color: white;
+    font-size: 14px;
+}
+footer .inner6 #footer_p1 span{
+    opacity: 0.3;
+}
+
+#footer_p2{
+    position: absolute;
+    right: 200px;
+    top: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+footer .inner6 h3{
+    position: absolute;
+    right: 200px;
+    top: 70px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+footer .inner6 #x{
+    position: absolute;
+    right: 200px;
+    top: 114px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 46px;
+    
+}
+
+footer .inner6 #insta{
+    position: absolute;
+    right: 240px;
+    top: 130px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    
+}
+footer .inner6 #insta img{
+    width: 40px;
+    color: white;
+}
+
+
+/*top*/
+.to-top{
+	color:rgb(225, 225, 225);
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:fixed;
+    bottom: 50px;
+    right: 100px;
+	border-color:rgb(225, 225, 225);
+	text-decoration:none;
+	transition:all .3s ease-out;
+    z-index: 5;
+   
+    text-align:center;
+	font-size:180%;
+	
+	font-family: Calibri, arial, sans-serif;
+}
+.to-top:before{
+	content:'▲';
+	font-size:40px;
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:pink;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+/*top 끝*/
+

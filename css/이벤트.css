@@ -1,0 +1,943 @@
+@charset 'utf-8';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html { scroll-behavior: smooth; }
+a{
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+}
+
+nav {
+    position: relative;
+    
+    width:100%;
+    height:80px; 
+    background: rgb(255, 255, 255);
+   border-bottom: 1px solid gray;
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index: 10;
+}
+
+nav #navh2 a{
+    position: relative;
+    top: 24px;
+    left: 150px;
+    color: rgb(0, 0, 0);
+    font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+    font-size: 26px;
+    
+
+}
+nav #navh2_1 a{
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    color: rgb(206, 0, 0);
+    font-style: italic;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-family: 'Anton', sans-serif; /*두껍게*/
+
+}
+nav #navh2_1 a #navspan{
+    color: rgb(0, 0, 0);
+}
+#solid1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    top: -35px;
+    left: 720px;
+    border-bottom: 2px solid rgb(206, 0, 0);
+}
+
+.nav {
+    position: absolute;
+    margin-top:50px;
+    width:100%;
+
+}
+
+.downdown {
+    position:fixed;
+    animation: down 0.3s ease;
+}
+@keyframes down {
+    0%{
+    transform: translateY(-50px)
+    }
+    100%{
+    transform: translateY(0px)
+    }  
+}
+
+
+/*메뉴부분*/
+
+.menu > li:hover {
+    transition-duration: 0.5s;
+}
+  
+  .menu > li:hover .submenu {
+    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+    transition-duration: 1s;
+}
+
+.menu {
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    top: 24px;
+    right: 100px;
+    width: 420px;
+    overflow: hidden;
+    
+  }
+  
+  .menu > li {
+    width: 20%; /*20*5=100%*/
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    
+  }
+  
+  .menu a {
+    position: relative;
+    color: #000000;
+    
+  }
+  
+  .submenu > li {
+    
+    line-height: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+  }
+
+    
+  .submenu > li:first-child {
+    margin-top: 16.2px;
+    line-height: 50px;
+    background-color: rgb(255, 255, 255, 0.9);
+  }
+  
+  .submenu {
+    height: 0px; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+  header{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+
+}
+header .inner1{
+    width: 1180px;
+    margin: 0 auto;
+}
+header .inner1 #head_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+    z-index: 0;
+    
+    
+}
+
+header h1{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 200px;
+    
+}
+
+
+
+header #headp_2{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 220px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    
+}
+
+header #head_a{
+    position: relative;
+    color: white;
+    top: 280px;
+    left: 540px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    z-index: 2;
+    padding: 10px 30px;
+    background-color: #000000;
+}
+header #head_a:hover{
+    transition: all 0.3s;
+    background-color: white;
+    color: black;
+}
+
+header #headp_1{
+    position: relative;
+    opacity: 0.2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 400px;
+    left: -130px;
+    top: 0px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+}
+
+/* Arrow & Hover Animation */
+#more-arrows {
+    position: relative;
+    top: -300px;
+    left: 555px;
+    width: 75px;
+    height: 65px;
+   
+  }
+  #more-arrows:hover polygon {
+    fill: #FFF;
+    transition: all 0.2s ease-out;
+  }
+  #more-arrows:hover polygon.arrow-bottom {
+    transform: translateY(-18px);
+  }
+  #more-arrows:hover polygon.arrow-top {
+    transform: translateY(18px);
+  }
+  
+polygon {
+    fill: #FFF;
+    transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+    opacity: 0.75;
+}
+  polygon.arrow-top {
+    opacity: 0.5;
+}
+
+
+
+
+
+.arrows{
+    position: absolute;
+    bottom: 0px;
+    left: 270px;
+    
+    
+}
+.arrows #img_btn{
+    position: absolute;
+    bottom: 100px;
+    left: -240px;
+    height: 60px; width: 60px; 
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+
+
+
+}
+.arrows #img_btn2{
+    position: absolute;
+    bottom: 100px;
+    right: -1000px;
+    height: 60px; width: 60px;
+    
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.arrows .doxs{
+    position: relative;
+    bottom: 30px;
+    left: -80px;
+}
+
+
+
+
+
+
+
+.arrows_1{
+    position: absolute;
+    bottom: 0px;
+    left: 268px;
+    
+    
+}
+.arrows_1 #img_btn{
+    position: absolute;
+    bottom: 100px;
+    left: -240px;
+    height: 60px; width: 60px; 
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+
+
+
+}
+.arrows_1 #img_btn2{
+    position: absolute;
+    bottom: 100px;
+    right: -1000px;
+    height: 60px; width: 60px;
+    
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.arrows_1 .doxs{
+    position: relative;
+    bottom: 30px;
+    left: -80px;
+}
+
+
+
+
+
+
+.arrows_2{
+    position: absolute;
+    bottom: 0px;
+    left: 268px;
+    
+    
+}
+.arrows_2 #img_btn{
+    position: absolute;
+    bottom: 100px;
+    left: -240px;
+    height: 60px; width: 60px; 
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+
+
+
+}
+.arrows_2 #img_btn2{
+    position: absolute;
+    bottom: 100px;
+    right: -1000px;
+    height: 60px; width: 60px;
+    
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.arrows_2 .doxs{
+    position: relative;
+    bottom: 30px;
+    left: -80px;
+}
+
+
+
+.arrows_3{
+    position: absolute;
+    bottom: 0px;
+    left: 268px;
+    
+    
+}
+.arrows_3 #img_btn{
+    position: absolute;
+    bottom: 100px;
+    left: -240px;
+    height: 60px; width: 60px; 
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+
+
+
+}
+.arrows_3 #img_btn2{
+    position: absolute;
+    bottom: 100px;
+    right: -1000px;
+    height: 60px; width: 60px;
+    
+    opacity: 0.7;
+    background-color: white;
+    font-size: 23px;
+    transition: all 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.arrows_3 .doxs{
+    position: relative;
+    bottom: 30px;
+    left: -80px;
+}
+
+
+
+
+
+
+#section_1{
+    width: 100%;
+}
+#section_1 .inner{
+    position: relative;
+    width: 1280px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+#section_1 .inner #sec_h1_1{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    position: relative;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+}
+
+#section_1 .inner #sec_span_1{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    position: absolute;
+    top: 120px;
+    left: 495px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+#section_1 .inner #fig1{
+    position: relative;
+    top: 120px;
+    left: 150px;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 220px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 3px 3px 3px rgb(210, 210, 210);
+}
+
+#section_1 .inner #fig1 #sec_h2_1{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+}
+
+#section_1 .inner #fig1 #fig_img1{
+    position: absolute;
+    left: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_1 .inner #fig1 #fig_img2{
+    position: absolute;
+    right: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_1 .inner #fig1 #sec_p1{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    left: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_1 .inner #fig1 #sec_p2{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    right: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_1 .inner #fig1 figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 0px; left: 0px;
+    color: #fff; text-align: center;
+    opacity: 0; /* 처음엔 안보이고 */
+    transition: 0.3s;
+}
+  
+#section_1 .inner #fig1:hover figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+    height: 140%;
+    z-index: 2;
+    
+}
+#section_1 .inner #fig1 figcaption p{
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    top: 15px;
+    
+}
+#section_1 .inner #fig1 figcaption p span{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    
+}
+
+
+
+
+#section_2{
+    width: 100%;
+}
+#section_2 .inner{
+    position: relative;
+    width: 1280px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+#section_2 .inner #fig1{
+    position: relative;
+    top: 30px;
+    left: 150px;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 220px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 3px 3px 3px rgb(210, 210, 210);
+}
+
+#section_2 .inner #fig1 #sec_h2_1{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+}
+
+#section_2 .inner #fig1 #fig_img1_1{
+    position: absolute;
+    left: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_2 .inner #fig1 #fig_img2_1{
+    position: absolute;
+    right: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_2 .inner #fig1 #sec_p1{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    left: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_2 .inner #fig1 #sec_p2{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    right: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_2 .inner #fig1 figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 0px; left: 0px;
+    color: #fff; text-align: center;
+    opacity: 0; /* 처음엔 안보이고 */
+    transition: 0.3s;
+}
+  
+#section_2 .inner #fig1:hover figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+    height: 140%;
+    z-index: 2;
+    
+}
+#section_2 .inner #fig1 figcaption p{
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    top: 15px;
+    
+}
+#section_2 .inner #fig1 figcaption p span{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    
+}
+
+
+
+#section_3{
+    width: 100%;
+}
+#section_3 .inner{
+    position: relative;
+    width: 1280px;
+    height: 240px;
+    margin: 0 auto;
+}
+
+#section_3 .inner #fig1{
+    position: relative;
+    top: 0px;
+    left: 150px;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 220px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 3px 3px 3px rgb(210, 210, 210);
+}
+
+#section_3 .inner #fig1 #sec_h2_1{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+}
+
+#section_3 .inner #fig1 #fig_img1_2{
+    position: absolute;
+    left: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_3 .inner #fig1 #fig_img2_2{
+    position: absolute;
+    right: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_3 .inner #fig1 #sec_p1{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    left: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_3 .inner #fig1 #sec_p2{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    right: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_3 .inner #fig1 figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 0px; left: 0px;
+    color: #fff; text-align: center;
+    opacity: 0; /* 처음엔 안보이고 */
+    transition: 0.3s;
+}
+  
+#section_3 .inner #fig1:hover figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+    height: 140%;
+    z-index: 2;
+    
+}
+#section_3 .inner #fig1 figcaption p{
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    top: 15px;
+    
+}
+#section_3 .inner #fig1 figcaption p span{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    
+}
+
+
+
+
+#section_4{
+    width: 100%;
+}
+#section_4 .inner{
+    position: relative;
+    width: 1280px;
+    height: 240px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#section_4 .inner #fig1{
+    position: relative;
+    top: 0px;
+    left: 150px;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 220px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 3px 3px 3px rgb(210, 210, 210);
+}
+
+#section_4 .inner #fig1 #sec_h2_1{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+}
+
+#section_4 .inner #fig1 #fig_img1_3{
+    position: absolute;
+    left: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_4 .inner #fig1 #fig_img2_3{
+    position: absolute;
+    right: 50px;
+    top: 27px;
+    width: 125px;
+    height: auto;
+}
+#section_4 .inner #fig1 #sec_p1{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    left: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_4 .inner #fig1 #sec_p2{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    right: 200px;
+    bottom: 20px;
+    color: rgb(173, 173, 173);
+}
+
+#section_4 .inner #fig1 figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 0px; left: 0px;
+    color: #fff; text-align: center;
+    opacity: 0; /* 처음엔 안보이고 */
+    transition: 0.3s;
+}
+  
+#section_4 .inner #fig1:hover figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+    height: 140%;
+    z-index: 2;
+    
+}
+#section_4 .inner #fig1 figcaption p{
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    top: 15px;
+    
+}
+#section_4 .inner #fig1 figcaption p span{
+    font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+    font-weight: bold;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+}
+
+footer .inner6{
+    position: relative;
+    width: 1280px;
+    height: 250px;
+    margin: 0 auto;
+}
+footer .inner6 h1{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    color: white;
+    font-size: 70px;
+}
+footer .inner6 #footer_p1{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 50px;
+    left: 280px;
+    color: white;
+    font-size: 14px;
+}
+footer .inner6 #footer_p1 span{
+    opacity: 0.3;
+}
+
+#footer_p2{
+    position: absolute;
+    right: 200px;
+    top: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+footer .inner6 h3{
+    position: absolute;
+    right: 200px;
+    top: 70px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+footer .inner6 #x{
+    position: absolute;
+    right: 200px;
+    top: 114px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 46px;
+    
+}
+
+footer .inner6 #insta{
+    position: absolute;
+    right: 240px;
+    top: 130px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    
+}
+footer .inner6 #insta img{
+    width: 40px;
+    color: white;
+}
+
+/*top*/
+.to-top{
+	color:rgb(225, 225, 225);
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:fixed;
+    bottom: 50px;
+    right: 100px;
+	border-color:rgb(225, 225, 225);
+	text-decoration:none;
+	transition:all .3s ease-out;
+    z-index: 5;
+   
+    text-align:center;
+	font-size:180%;
+	
+	font-family: Calibri, arial, sans-serif;
+}
+.to-top:before{
+	content:'▲';
+	font-size:40px;
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:pink;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+/*top 끝*/
