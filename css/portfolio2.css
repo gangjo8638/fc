@@ -1,6 +1,21 @@
  @charset 'utf-8';
- 
- @media screen and (min-width: 769px){
+ .noise {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1001;
+        background-image: url('https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif');
+        background-position: 0 0;
+        background-size: auto;
+        pointer-events: none;
+        opacity: 0.05;
+        transition: opacity .2s cubic-bezier(.445, .05, .55, .95); 
+        visibility: visible;
+      /*   원본 페이지 : https://www.rawlab.co */
+      }
+ @media screen and (min-width: 768px){
     *{
         margin: 0px;
         padding: 0px;
@@ -21,26 +36,26 @@
         width:100%;
         height:80px; 
         background: rgb(255, 255, 255);
-       border-bottom: 1px solid gray;
+        border-bottom: 1px solid gray;
         top:0px;
         left:0px;
-        position:absolute;
         z-index: 10;
     }
     
     nav #navh2 a{
         position: relative;
-        top: 24px;
-        left: 150px;
+        top: 28px;
+        left: 170px;
         color: rgb(0, 0, 0);
         font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
-        font-size: 26px;
-        
+        font-size: 20px;
+        line-height: 50%;
     
     }
     nav #navh2_1 a{
-        position: relative;
-        top: -30px;
+        position: absolute;
+        top: 0px;
+        left: 70px;
         display: flex;
         justify-content: center;
         color: rgb(206, 0, 0);
@@ -50,18 +65,21 @@
         font-family: 'Anton', sans-serif; /*두껍게*/
     
     }
+    nav .sports_mma{
+        position: relative;
+        top: -20px;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 5px;
+        font-size: 3.4rem;
+
+        
+    }
+    
     nav #navh2_1 a #navspan{
         color: rgb(0, 0, 0);
     }
-    #solid1{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 60px;
-        top: -35px;
-        left: 720px;
-        border-bottom: 2px solid rgb(206, 0, 0);
-    }
+   
     
     .nav {
         position: absolute;
@@ -86,57 +104,123 @@
     
     /*메뉴부분*/
     
-    .menu > li:hover {
-        transition-duration: 0.5s;
-    }
-      
-      .menu > li:hover .submenu {
-        height: 250px; /*서브메뉴 li한개의 높이 50*5*/
-        transition-duration: 1s;
-    }
-    
-    .menu {
+    #menuButton {
+        background-color: white;
+        color: black;
+        font-size: 30px;
+        
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
         position: absolute;
-        font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
         top: 24px;
-        right: 100px;
-        width: 420px;
-        overflow: hidden;
+        right: 50px;
+        font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+    }
+    #menuButton:hover {
         
-      }
-      
-      .menu > li {
-        width: 20%; /*20*5=100%*/
-        float: left;
-        text-align: center;
-        line-height: 40px;
+    }
+
+    #overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(20, 20, 20);
+        overflow-y: hidden;
+        transition: height 0.5s;
+    }
+
+    #menuContent {
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        /*background-color: #111;*/
+        color: white;
+        padding: 60px 20px;
+        box-sizing: border-box;
+        transition: top 0.5s;
         
-      }
-      
-      .menu a {
+    }
+
+    #menuCloseBtn {
+        font-size: 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 24px;
+        right: 50px;
+        font-family: 'Sedgwick Ave Display', cursive; /*개성있는 폰트*/
+
+    }
+
+    #menuContent #menuCloseBtn {
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    #menuContent #menuCloseBtn:hover {
+        color: #f1f1f1;
+    }
+
+    #menuContent .p_parent {
+        position: absolute;
+        
+        left: 80px;
+        display: flex;
+        align-items: center; /* 세로 가운데 정렬을 위한 속성 */
+        /* justify-content: center;  가로 가운데 정렬을 위한 속성 */
+        height: 75vh;
+        margin: 0 auto; /* body의 기본 마진 제거 */
+    }
+    #menuContent .p_parent p{
         position: relative;
-        color: #000000;
-        
-      }
-      
-      .submenu > li {
-        
-        line-height: 50px;
-        background-color: rgb(255, 255, 255, 0.9);
-      }
+        font-size: 17px;
+        font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+        display: block;
+
+    }
+
+    #menuContent .inner{
+        position: absolute;
+        top: 50px;
+        right: 300px;
+    }
     
+    #menuContent .inner #menus{
         
-      .submenu > li:first-child {
-        margin-top: 16.2px;
-        line-height: 50px;
-        background-color: rgb(255, 255, 255, 0.9);
-      }
-      
-      .submenu {
-        height: 0px; /*ul의 높이를 안보이게 처리*/
-        overflow: hidden;
-      }
+        display: block;
+        right: 350px;
+        font-size: 70px;
+        font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+        font-weight: 600;
+        color: white;
+        line-height: 115px;
+        transition: all 0.3s;
+        
+    }
+    #menuContent .inner #menus:hover{
+        color: #9e9e9e;
+        
+        
+    }
+    #copylight_p{
+        position: absolute;
+        bottom: -540px;
+        right: 40px;
+        font-family: 'Noto Sans KR', sans-serif; /*기본폰트*/
+        font-size: 17px;
+        word-spacing: 10px;
+    }
     
+    
+
+
+    /*끝*/
     
    
     
@@ -1386,7 +1470,7 @@
 
 /*미디어*/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     *{
         margin: 0px;
         padding: 0px;
