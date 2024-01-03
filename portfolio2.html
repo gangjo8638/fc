@@ -24,59 +24,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+
+  <div class="noise"></div>
+
   <a href="#" class="to-top"></a>
     <nav>
         <h1 id="navh2"><a href="portfolio2.html">Fighting Championship</a> </h1>
         <h1 id="navh2_1"><a href="portfolio2.html">u <span id="navspan">fc</span></a> </h1>
-        <div id="solid1"></div>
+        <span class="material-symbols-outlined sports_mma">
+          sports_mma
+          </span>
+          
         
-        <ul class="menu">
-            <li>
-              <a href="port2회사소개.html">회사소개</a>
-              <ul class="submenu">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="이벤트.html">이벤트</a>
-              <ul class="submenu">
-                <li><a href="이벤트.html">이벤트</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="파이터.html">파이터</a>
-              <ul class="submenu">
-                <li><a href="파이터.html">파이터</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="뉴스.html">뉴스</a>
-              <ul class="submenu">
-                <li><a href="뉴스.html">뉴스</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">스토어</a>
+        
+        <button id="menuButton" onclick="toggleMenu()">menu</button>
+
+        <div id="overlay">
+          <div id="menuContent">
+              <a href="javascript:void(0)" id="menuCloseBtn" onclick="toggleMenu()">close</a>
+              <!-- 여기에 메뉴 내용 추가 -->
+              <div class="p_parent">
+                <p>MMA를 사랑하시나요? </p><br>
+               
+              </div>
               
-            </li>
-          </ul>
-    
+              <div class="inner">
+                <a id="menus" href="port2회사소개.html">회사소개</a>
+                <a id="menus" href="이벤트.html">이벤트</a>
+                <a id="menus" href="파이터.html">파이터</a>
+                <a id="menus" href="뉴스.html">뉴스</a>
+                <a id="menus" href="#">스토어</a>
+              </div>
+              <p id="copylight_p">ⓒ 2024 @fc</p>
+              
+              <!-- 추가 끝 -->
+          </div>
+      </div>
     </nav>
 
 
