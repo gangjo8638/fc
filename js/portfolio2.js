@@ -26,6 +26,31 @@ upnav();
 
 
 
+//메뉴부분
+function toggleMenu() {
+  var overlay = document.getElementById("overlay");
+  var menuContent = document.getElementById("menuContent");
+
+  if (overlay.style.height === "100%") {
+      menuContent.style.transition = "top 0.5s ease-in-out";
+
+      // 천천히 움직이다가 4분의 1 정도 사라졌을 때 다시 정상적인 속도로 사라지게 함
+      setTimeout(function() {
+          menuContent.style.top = "-25%";
+          setTimeout(function() {
+              overlay.style.height = "0";
+              menuContent.style.top = "-100%";
+              menuContent.style.transition = "top 0.5s";
+          }, 200);
+      }, 200);
+  } else {
+      overlay.style.height = "100%";
+      menuContent.style.top = "0";
+  }
+}
+
+
+
 
 
 let mainText = document.querySelector("#section_1 .inner4 #card #tom")
