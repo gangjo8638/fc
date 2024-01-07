@@ -50,8 +50,53 @@ function toggleMenu() {
 }
 
 
+/*마우스*/
+var dot = document.getElementById("dot");
+var textmouse = document.getElementById("textmouse");
+var imageContainer = document.getElementById("imageContainer");
 
+function moveDot(event) {
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
 
+  var offsetX = (mouseX - dot.offsetWidth / 2) + "px";
+  var offsetY = (mouseY - dot.offsetHeight / 2) + "px";
+
+  dot.style.transform = "translate(" + offsetX + ", " + offsetY + ")";
+  
+  // 이미지 안에 점이 있는지 확인
+  if (isInsideImage()) {
+    // 점이 이미지 안에 있으면 텍스트 표시
+    textmouse.style.opacity = 1;
+    // 점의 크기를 키우기
+    dot.style.transform += "scale(2)";
+  } else {
+    // 이미지 밖에 있으면 텍스트 숨김
+    textmouse.style.opacity = 0;
+    // 점의 크기를 초기화
+    dot.style.transform = dot.style.transform.replace("scale(2)", "");
+  }
+}
+
+function isInsideImage() {
+  var dotRect = dot.getBoundingClientRect();
+  var imageRect = imageContainer.getBoundingClientRect();
+
+  return (
+    dotRect.left >= imageRect.left &&
+    dotRect.right <= imageRect.right &&
+    dotRect.top >= imageRect.top &&
+    dotRect.bottom <= imageRect.bottom
+  );
+}
+
+function handleScroll() {
+  // 스크롤 이벤트가 발생했을 때도 moveDot 함수 호출
+  moveDot({ clientX: event.clientX, clientY: event.clientY });
+}
+
+document.addEventListener("mousemove", moveDot);
+window.addEventListener("scroll", handleScroll);
 
 let mainText = document.querySelector("#section_1 .inner4 #card #tom")
 window.addEventListener('scroll', function(){
