@@ -98,16 +98,76 @@ function handleScroll() {
 document.addEventListener("mousemove", moveDot);
 window.addEventListener("scroll", handleScroll);
 
+
+
+
+
+
+/*이미지 슬라이드*/
+const carousel = document.querySelector(".carousel");
+const arrowIcons = document.querySelectorAll(".wrapper i");
+
+let isDragging = false;
+let startScrollX;
+let startX;
+
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+  arrowIcons[0].style.display = carousel.scrollLeft === 0 ? "none" : "block";
+  arrowIcons[1].style.display = carousel.scrollLeft === scrollWidth ? "none" : "block";
+};
+
+arrowIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    let firstImgWidth = carousel.children[0].offsetWidth + 14;
+    carousel.scrollLeft += icon.id === "left" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcons(), 60);
+  });
+});
+
+const dragStart = (e) => {
+  isDragging = true;
+  startX = e.pageX || e.touches[0].pageX;
+  startScrollX = carousel.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragging) return;
+  let currentX = e.pageX || e.touches[0].pageX;
+  let diffX = startX - currentX;
+  carousel.scrollLeft = startScrollX + diffX;
+  showHideIcons();
+};
+
+const dragStop = () => {
+  isDragging = false;
+};
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+document.addEventListener("mousemove", dragging);
+document.addEventListener("touchmove", dragging);
+
+document.addEventListener("mouseup", dragStop);
+document.addEventListener("touchend", dragStop);
+
+
+
+
+
+
+/*페이드 인 아웃 */
 let mainText = document.querySelector("#section_1 .inner4 #card #tom")
 window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText.style.animation="disappaer 1s ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText.style.animation= "disappaer 1s ease-out forwards";
       
     }
@@ -121,11 +181,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText1.style.animation="disappaer1 1s ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText1.style.animation= "disappaer1 1s ease-out forwards";
       
     }
@@ -139,11 +199,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText2.style.animation="disappaer2 2s ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText2.style.animation= "disappaer2 2s ease-out forwards";
       
     }
@@ -158,11 +218,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText3.style.animation="disappaer3 2s ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText3.style.animation= "disappaer3 2s ease-out forwards";
       
     }
@@ -176,11 +236,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText4.style.animation="disappaer4 2.5s  ease-out forwards";
       
     }
-    else if(value < 1300){ //등장하기
+    else if(value < 1600){ //등장하기
       mainText4.style.animation= "disappaer4 2.5s  ease-out forwards";
       
     }
@@ -195,11 +255,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText5.style.animation="disappaer5 2s  ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText5.style.animation= "disappaer5 2s  ease-out forwards";
       
     }
@@ -214,11 +274,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText6.style.animation="disappaer6 2s  ease-out forwards";
       
     }
-    else if(value < 1200){ //등장하기
+    else if(value < 1500){ //등장하기
       mainText6.style.animation= "disappaer6 2s  ease-out forwards";
       
     }
@@ -233,11 +293,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText7.style.animation="disappaer7 2.5s  ease-out forwards";
       
     }
-    else if(value < 1300){ //등장하기
+    else if(value < 1600){ //등장하기
       mainText7.style.animation= "disappaer7 2.5s  ease-out forwards";
       
     }
@@ -252,11 +312,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText8.style.animation="disappaer8 1s ease-out forwards";
       
     }
-    else if(value < 1500){ //등장하기
+    else if(value < 1800){ //등장하기
       mainText8.style.animation= "disappaer8 1s ease-out forwards";
       
     }
@@ -271,11 +331,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText9.style.animation="disappaer9 1s ease-out forwards";
       
     }
-    else if(value < 1500){ //등장하기
+    else if(value < 1800){ //등장하기
       mainText9.style.animation= "disappaer9 1s ease-out forwards";
       
     }
@@ -291,11 +351,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText10.style.animation="disappaer10 2s ease-out forwards";
       
     }
-    else if(value < 1500){ //등장하기
+    else if(value < 1800){ //등장하기
       mainText10.style.animation= "disappaer10 2s ease-out forwards";
       
     }
@@ -310,11 +370,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText11.style.animation="disappaer11 2s ease-out forwards";
       
     }
-    else if(value < 1600){ //등장하기
+    else if(value < 1900){ //등장하기
       mainText11.style.animation= "disappaer11 2s ease-out forwards";
       
     }
@@ -329,11 +389,11 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText12.style.animation="disappaer12 2.5s ease-out forwards";
       
     }
-    else if(value < 1700){ //등장하기
+    else if(value < 1900){ //등장하기
       mainText12.style.animation= "disappaer12 2.5s ease-out forwards";
       
     }
@@ -348,7 +408,7 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText13.style.animation="disappaer13 2s ease-out forwards";
       
     }
@@ -366,7 +426,7 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText14.style.animation="disappaer14 2s ease-out forwards";
       
     }
@@ -385,7 +445,7 @@ window.addEventListener('scroll', function(){
     let value = this.window.scrollY
     console.log("scrollY", value);
 
-    if(value > 2200){ //없어지기
+    if(value > 2700){ //없어지기
       mainText15.style.animation="disappaer15 2.5s ease-out forwards";
       
     }
